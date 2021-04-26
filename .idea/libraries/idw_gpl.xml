@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="idw-gpl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/lookAndFeel/idw-gpl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/email/smtp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/email/pop3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/email/mailapi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/email/imap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/email/gimap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/email/dsn.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/email/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/persistencia/xstream-1.4.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/planilha/jxl-2.6.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/PDF/iText-5.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

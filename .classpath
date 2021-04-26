@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/email/activation.jar"/>
+	<classpathentry kind="lib" path="lib/email/dsn.jar"/>
+	<classpathentry kind="lib" path="lib/email/gimap.jar"/>
+	<classpathentry kind="lib" path="lib/email/imap.jar"/>
+	<classpathentry kind="lib" path="lib/email/mailapi.jar"/>
+	<classpathentry kind="lib" path="lib/email/pop3.jar"/>
+	<classpathentry kind="lib" path="lib/email/smtp.jar"/>
+	<classpathentry kind="lib" path="lib/lookAndFeel/idw-gpl.jar"/>
+	<classpathentry kind="lib" path="lib/persistencia/xstream-1.4.15.jar"/>
+	<classpathentry kind="lib" path="lib/PDF/iText-5.0.5.jar"/>
+	<classpathentry kind="lib" path="img"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
