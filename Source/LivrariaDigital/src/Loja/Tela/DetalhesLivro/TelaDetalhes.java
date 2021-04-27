@@ -25,8 +25,6 @@ public class TelaDetalhes extends TelaPadrao {
     private Font font = new Font("Arial",Font.BOLD,13);
     private JPanel back;
     private JPanel detalhesDoLivro;
-    private JPanel painelComentarios;
-    private  JTextArea comentario;
     private Livro livro;
     private Usuario user;
 
@@ -113,7 +111,7 @@ public class TelaDetalhes extends TelaPadrao {
         detalhesDoLivro.setBackground(Color.DARK_GRAY);
         int i;
         if(this.user==null){
-            i=1060;
+            i=1100;
         }else{
             i=1000;
         }
@@ -306,17 +304,15 @@ public class TelaDetalhes extends TelaPadrao {
 
 
     }
-
-    public void addJButtonSalvar(){
-        JButton salvar = new JButton("Salvar");
-        salvar.setBounds(45, 1010, 130, 25);
-        salvar.setFont(font);
-        salvar.setBackground(new Color(102, 102, 102));
-        salvar.setBorder(null);
-        salvar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ArrayList<String> info = new ArrayList<String>();
+    private class OuvinteADM implements ActionListener{
+    	private CentralDeInformacoes central = Persistencia.getUnicaInstancia().recuperar();
+        private ArrayList<Livro> livrosArray = central.getLivros();
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			JButton  button = (JButton) arg0.getSource();
+			
+			if(button.getText().equals("Salvar")) {
+				ArrayList<String> info = new ArrayList<String>();
                 info.add(titulo.getText());
                 info.add(resumoArea.getText());
                 info.add(idioma.getText());
@@ -327,15 +323,7 @@ public class TelaDetalhes extends TelaPadrao {
                 if(info.contains("")||info.contains(" ")){
                     JOptionPane.showMessageDialog(null, "Preencha todos os Campos");
                 }else{
-                    CentralDeInformacoes central = Persistencia.getUnicaInstancia().recuperar();
-                    ArrayList<Livro> livrosArray = central.getLivros();
-                    for(int i =0;i<livrosArray.size();i++){
-                        if(livrosArray.get(i).getTitulo().equals(livro.getTitulo())&&
-                                livrosArray.get(i).getTIPO().equals(livro.getTIPO())){
-                            central.getLivros().remove(i);
-                            central.salvar();
-                        }
-                    }
+                	this.removeLivro();
                     livro.setTitulo(info.get(0));
                     livro.setResumo(info.get(1));
                     livro.setIdioma(info.get(2));
@@ -348,10 +336,52 @@ public class TelaDetalhes extends TelaPadrao {
                     central.salvar();
                     JOptionPane.showMessageDialog(null, "Alterado com sucesso");
                 }
-
+			}else {
+				int resposta =JOptionPane.showConfirmDialog(
+						null, "Tem certeza que deseja apagar o livro?", "Apagar Livro", JOptionPane.YES_NO_OPTION);
+				String menssagem = "Cancelado com sucesso";
+				if(resposta==0) {
+					this.removeLivro();
+					menssagem = "Removido com sucesso";
+				}
+				JOptionPane.showMessageDialog(null, menssagem);
+					
+			}
+			dispose();
+			new TelaLoja();
+			
+		}
+		public void removeLivro() {
+			for(int i =0;i<livrosArray.size();i++){
+                if(livrosArray.get(i).getTitulo().equals(livro.getTitulo())&&
+                        livrosArray.get(i).getTIPO().equals(livro.getTIPO())){
+                    central.getLivros().remove(i);
+                    central.salvar();
+                }
             }
-        });
+		}
+    	
+    }
+    public void addJButtonSalvar(){
+    	OuvinteADM ouvinte = new OuvinteADM();
+    	
+        JButton salvar = new JButton("Salvar");
+        salvar.setBounds(45, 1010, 130, 25);
+        salvar.setFont(font);
+        salvar.setBackground(new Color(102, 102, 102));
+        salvar.setBorder(null);
+        salvar.addActionListener(ouvinte);
+        
+        JButton excluir = new JButton("Excluir Livro");
+        excluir.setBounds(45, 1050, 130, 25);
+        excluir.setFont(font);
+        excluir.setBackground(new Color(102, 102, 102));
+        excluir.setBorder(null);
+        excluir.addActionListener(ouvinte);
+        
+        
         this.detalhesDoLivro.add(salvar);
+        this.detalhesDoLivro.add(excluir);
 
     }
     private  Color cor = new Color(102, 102, 102);

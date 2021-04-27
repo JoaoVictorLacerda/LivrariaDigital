@@ -58,6 +58,7 @@ public class TelaHomeUser extends TelaPadrao {
         JButton comprados = new JButton("Livros comprados");
         JButton colecao = new JButton("Minha coleção");
         JButton sair = new JButton("Sair");
+        JButton apagarConta = new JButton("Apagar Conta");
 
         loja.setBounds(75, 110, 150, 25);
         loja.addActionListener(ouvinte);
@@ -82,11 +83,18 @@ public class TelaHomeUser extends TelaPadrao {
         sair.setBackground(new Color(229, 33, 33));
         sair.addActionListener(ouvinte);
         sair.setBorder(null);
+        
+        apagarConta.setBounds(75, 265, 150, 25);
+        apagarConta.setFont(font);
+        apagarConta.setBackground(new Color(229, 33, 33));
+        apagarConta.addActionListener(ouvinte);
+        apagarConta.setBorder(null);
 
         this.JP_PAINEL.add(loja);
         this.JP_PAINEL.add(comprados);
         this.JP_PAINEL.add(colecao);
         this.JP_PAINEL.add(sair);
+        this.JP_PAINEL.add(apagarConta);
     }
 
     public void addPainel() {
