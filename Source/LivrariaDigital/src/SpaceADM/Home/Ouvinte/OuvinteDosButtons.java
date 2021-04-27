@@ -56,46 +56,42 @@ public class OuvinteDosButtons implements ActionListener {
     private ArrayList<Livro>livrosFinal=new ArrayList<>();
 
     public void btnMaisVisualizados(){
-        for(int i = 0;i<10;i++){
-            int num =0;
-            Livro livro=null;
-            for(Livro l :livros){
-                if(l.getNumeroDeVisualizacoes()>num){
-                    num = l.getNumeroDeVisualizacoes();
-                    livro = l;
-                }
-
-            }
-            if(livro!=null){
-                livrosFinal.add(livro);
-                livros.remove(livro);
-            }
-        }
+    	this.comumPDF(false);
         GeradorDePDF.gerarRelatorio(livrosFinal,
                 "MaisVisualizados.pdf","Esses são os Livros mais procurados","Visualizações");
-
+        
 
     }
     public void btnMaisInteressado(){
 
-        for(int i = 0;i<10;i++){
-            int num =0;
-            Livro livro=null;
-            for(Livro l :livros){
-                if(l.getNumeroDePessoasQueIndicaramInteresse()>num){
-                    num = l.getNumeroDePessoasQueIndicaramInteresse();
-                    livro = l;
-                }
-
-            }
-            if(livro!=null){
-                livrosFinal.add(livro);
-                livros.remove(livro);
-            }
-        }
+    	this.comumPDF(true);
         GeradorDePDF.gerarRelatorio(livrosFinal,
                 "MaisInteressados.pdf","Esses são os Livros esgotados com mais interessados","N°Interessados");
 
+    }
+    public void comumPDF(boolean condicao) {
+    	for(int i=0;i<10;i++) {
+    		int num=0;
+    		Livro livro =null;
+    		for(int j=0;j<livros.size();j++) {
+    			if(condicao) {
+    				if(livros.get(j).getNumeroDePessoasQueIndicaramInteresse()>num){
+                        num = livros.get(j).getNumeroDePessoasQueIndicaramInteresse();
+                        livro = livros.get(j);
+                    }
+    			}else {
+    				if(livros.get(j).getNumeroDeVisualizacoes()>num){
+                        num = livros.get(j).getNumeroDeVisualizacoes();
+                        livro = livros.get(j);
+                    }
+    			}
+    			
+    		}
+    		if(livro!=null){
+                livrosFinal.add(i,livro);
+                livros.remove(livro);
+            }
+    	}
     }
     @Override
     public void actionPerformed(ActionEvent e) {

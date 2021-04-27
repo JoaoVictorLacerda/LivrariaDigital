@@ -66,7 +66,7 @@ public class OuvinteDosJButtons implements ActionListener {
                         central.salvar();
 
                         user.addCompras(livroInfo);
-                    mensagem = "Boleto Gerado \n"+"Operação Realizada com sucesso";
+                    	mensagem = "Boleto Gerado \n"+"Operação Realizada com sucesso";
 
                 }
                 break;

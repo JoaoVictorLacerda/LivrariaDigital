@@ -10,7 +10,6 @@
       <root url="jar://$PROJECT_DIR$/lib/email/dsn.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/email/activation.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/persistencia/xstream-1.4.15.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/planilha/jxl-2.6.10.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/PDF/iText-5.0.5.jar!/" />
     </CLASSES>
     <JAVADOC />

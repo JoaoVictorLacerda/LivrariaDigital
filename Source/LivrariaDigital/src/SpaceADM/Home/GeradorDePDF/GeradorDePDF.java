@@ -1,6 +1,8 @@
 package SpaceADM.Home.GeradorDePDF;
 
 import Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro;
+import Utilitarios.TestaFilesPDF.ExistePDFQuestion;
+
 import com.itextpdf.text.*;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.pdf.PdfPCell;
@@ -25,8 +27,9 @@ public class GeradorDePDF {
         int result = fc.showOpenDialog(fc);
         if(result != JFileChooser.CANCEL_OPTION){
             String dir = fc.getSelectedFile().getAbsolutePath();
+            String dirFinal = ExistePDFQuestion.testa(dir, nomeDoArquivo);
             try {
-                OutputStream os = new FileOutputStream(dir+"/"+nomeDoArquivo);
+                OutputStream os = new FileOutputStream(dirFinal);
                 PdfWriter.getInstance(doc,os);
                 doc.open();
                 String lista[]= {primeiraCell,"Titulo","Idioma","Editora","Ano","Tipo","Genero"};
@@ -80,6 +83,7 @@ public class GeradorDePDF {
 
                 doc.add(tabela);
                 doc.close();
+                JOptionPane.showMessageDialog(null, "Boleto gerado com sucesso!");
                 return true;
             }catch (Exception e){
                 return false;
