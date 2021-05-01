@@ -2,8 +2,6 @@ package Utilitarios.Persistencia.Central_de_informacoes.Livro.Tipos;
 
 import Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro;
 
-import java.util.ArrayList;
-
 public class Literatura  extends Livro{
 
     private final String TIPO = "Literatura";

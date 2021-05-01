@@ -2,8 +2,6 @@ package Loja.OuvintesDetalhes;
 
 import Loja.Tela.DetalhesLivro.TelaDetalhes;
 import Loja.Tela.Loja.TelaLoja;
-import SpaceADM.Home.Tela.TelaHomeADM;
-import SpaceUSER.Home.Tela.TelaHomeUser;
 import Utilitarios.Persistencia.Central_de_informacoes.Central.CentralDeInformacoes;
 import Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro;
 import Utilitarios.Persistencia.Central_de_informacoes.Usuario.Usuario;
@@ -27,8 +25,7 @@ public class OuvinteDosJButtons implements ActionListener {
         Livro livroEscolhido = tela.getLivro();
         String livroInfo = livroEscolhido.getTitulo()+","+
                 livroEscolhido.getTIPO()+","+
-                livroEscolhido.getGenero()+","+
-                livroEscolhido.getResumo();
+                livroEscolhido.getGenero();
 
         Usuario user = tela.getUser();
         ArrayList<Usuario> usuarios = central.getUsuario();

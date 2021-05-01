@@ -1,14 +1,14 @@
 package SpaceADM.CarregarPlanilha.Ouvintes;
 
 import SpaceADM.CarregarPlanilha.Factory.EscolheTipo;
+import SpaceADM.CarregarPlanilha.Model.Livraria;
+import SpaceADM.CarregarPlanilha.Model.LivrariaTableModel;
 import SpaceADM.CarregarPlanilha.Tela.TelaCarregarPlanilha;
-import SpaceADM.Home.Tela.TelaHomeADM;
 import Utilitarios.Persistencia.Central_de_informacoes.Central.CentralDeInformacoes;
 import Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro;
 import Utilitarios.Persistencia.PersistenciaSingleton.Persistencia;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -25,19 +25,7 @@ public class OuvinteDosJButtons implements ActionListener {
     public OuvinteDosJButtons(TelaCarregarPlanilha tela){
         this.tela=tela;
     }
-   
-	public void testeNumeros(ArrayList<String> info) throws Exception {
-        try{
-            Integer.parseInt(info.get(2));
-            Integer.parseInt(info.get(6));
-            Float.parseFloat(info.get(7));
-            if(info.get(0).toLowerCase().equals("periódicos")){
-                Long.parseLong(info.get(11));
-            }
-        }catch(Exception e){
-            throw new Exception("Digite um número no campo de número");
-        }
-    }
+
     public void testeGeneros(ArrayList<String> info, int numeroDaLinha) throws Exception {
         String tipo = info.get(0).toLowerCase();
         String generoString =
@@ -61,7 +49,7 @@ public class OuvinteDosJButtons implements ActionListener {
         if(index !=-1){
             if((!matrizGenero[index][0].contains(info.get(8).toLowerCase()))||
                 info.get(8).equals(" ")||info.get(8).equals("")){
-                throw new Exception("Problema com os Gêneros");
+                throw new Exception("Escolha um Gênero de "+tipo);
             }
         }else{
             throw new Exception("Livro na linha: "+numeroDaLinha+1+" Não reconhecido");
@@ -70,7 +58,7 @@ public class OuvinteDosJButtons implements ActionListener {
 
     public void uparParaOBanco() throws Exception {
 
-        DefaultTableModel tabelaInformacoes = this.tela.getModel1();
+        LivrariaTableModel tabelaInformacoes = this.tela.getModel1();
 
         if(tabelaInformacoes.getRowCount() != 0){
 
@@ -82,9 +70,19 @@ public class OuvinteDosJButtons implements ActionListener {
 
                 if(!this.tela.getModel1().getValueAt(i,0).equals("")){
                     for(int j =0;j <13;j++){
-                        info.add((String) tabelaInformacoes.getValueAt(i,j));
+                        if(j!=2&&j!=6&&j!=7&&j!=11&&j!=8){
+                            info.add((String) tabelaInformacoes.getValueAt(i,j));
+                        }else if(j==7){
+                            info.add(Float.toString((Float)tabelaInformacoes.getValueAt(i,j)));
+                        }else if(j==11){
+                            info.add(Long.toString((Long)tabelaInformacoes.getValueAt(i,j)));
+                        }else if(j==8) {
+                            String genero[] = (String[]) ((String) tabelaInformacoes.getValueAt(i,j)).split("\\(");
+                            info.add(genero[0].trim());
+                        }else{
+                            info.add(Integer.toString((Integer)tabelaInformacoes.getValueAt(i,j)));
+                        }
                     }
-                    this.testeNumeros(info);
                     this.testeGeneros(info,i);
                     Livro livro = EscolheTipo.factory(info);
                     if(livro!=null){
@@ -111,8 +109,6 @@ public class OuvinteDosJButtons implements ActionListener {
 
                 this.uparParaOBanco();
                 JOptionPane.showMessageDialog(tela,"Cadastro Realizado");
-                this.tela.dispose();
-                new TelaHomeADM();
 
             }else if(textBTN.equals("Adicionar Linha")){
                 this.addLinha();
@@ -126,7 +122,7 @@ public class OuvinteDosJButtons implements ActionListener {
         }
 
     }
-    public DefaultTableModel getModelParaOperacoes(){
+    public LivrariaTableModel getModelParaOperacoes(){
         return this.tela.getModel1();
     }
 
@@ -151,6 +147,6 @@ public class OuvinteDosJButtons implements ActionListener {
     }
 
     public void addLinha(){
-        this.getModelParaOperacoes().addRow(new Object[]{});
+        this.getModelParaOperacoes().addRow(new Livraria());
     }
 }

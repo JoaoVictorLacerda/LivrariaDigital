@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CentralBackup>
+  <livros>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Literatura</tipo>
+      <titulo>Livro19</titulo>
+      <anoDePublicacao>2000</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>1</quantidade>
+      <preco>12.0</preco>
+      <genero>Literatura Brasileira (L)</genero>
+      <mes></mes>
+      <autores>a,n</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Desenvolvimento Pessoal</tipo>
+      <titulo>Livro20</titulo>
+      <anoDePublicacao>2001</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>2</quantidade>
+      <preco>12.0</preco>
+      <genero>Autoajuda (DV P)</genero>
+      <mes></mes>
+      <autores>a,n</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Periódicos</tipo>
+      <titulo>Livro21</titulo>
+      <anoDePublicacao>2002</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>3</quantidade>
+      <preco>12.0</preco>
+      <genero>Gibi (P)</genero>
+      <mes>Dezembro</mes>
+      <autores>a</autores>
+      <numeroDeEdicao>5564</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Técnico</tipo>
+      <titulo>Livro22</titulo>
+      <anoDePublicacao>2003</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>4</quantidade>
+      <preco>12.0</preco>
+      <genero>Formação Profissional (T)</genero>
+      <mes></mes>
+      <autores>a</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto>ddas</assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Literatura</tipo>
+      <titulo>Livro23</titulo>
+      <anoDePublicacao>2004</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>5</quantidade>
+      <preco>12.0</preco>
+      <genero>Literatura Brasileira (L)</genero>
+      <mes></mes>
+      <autores>a</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Desenvolvimento Pessoal</tipo>
+      <titulo>Livro24</titulo>
+      <anoDePublicacao>2005</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>6</quantidade>
+      <preco>12.0</preco>
+      <genero>Religião (DV P)</genero>
+      <mes></mes>
+      <autores>a,n</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Periódicos</tipo>
+      <titulo>Livro25</titulo>
+      <anoDePublicacao>2006</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>7</quantidade>
+      <preco>12.0</preco>
+      <genero>Revista de notícias (P)</genero>
+      <mes>Janeiro</mes>
+      <autores>a</autores>
+      <numeroDeEdicao>66755564</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Técnico</tipo>
+      <titulo>Livro26</titulo>
+      <anoDePublicacao>2007</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>8</quantidade>
+      <preco>12.0</preco>
+      <genero>Formação Profissional (T)</genero>
+      <mes></mes>
+      <autores>a</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto>asd</assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Literatura</tipo>
+      <titulo>Livro27</titulo>
+      <anoDePublicacao>2008</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>9</quantidade>
+      <preco>12.0</preco>
+      <genero>Artes (L)</genero>
+      <mes></mes>
+      <autores>a</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+    <SpaceADM.CarregarPlanilha.Model.Livraria>
+      <tipo>Desenvolvimento Pessoal</tipo>
+      <titulo>Livro28</titulo>
+      <anoDePublicacao>2009</anoDePublicacao>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <editora>da</editora>
+      <quantidade>10</quantidade>
+      <preco>12.0</preco>
+      <genero>Autoajuda (DV P)</genero>
+      <mes></mes>
+      <autores>a,n</autores>
+      <numeroDeEdicao>0</numeroDeEdicao>
+      <assunto></assunto>
+    </SpaceADM.CarregarPlanilha.Model.Livraria>
+  </livros>
+</CentralBackup>

@@ -51,15 +51,14 @@ public class OuvinteDosButtons implements ActionListener {
         this.tela.dispose();
         new TelaLoja();
     }
-    private CentralDeInformacoes central= Persistencia.getUnicaInstancia().recuperar();
-    private ArrayList<Livro> livros = central.getLivros();
-    private ArrayList<Livro>livrosFinal=new ArrayList<>();
+    private ArrayList<Livro>livrosFinal;
 
     public void btnMaisVisualizados(){
     	this.comumPDF(false);
         GeradorDePDF.gerarRelatorio(livrosFinal,
                 "MaisVisualizados.pdf","Esses são os Livros mais procurados","Visualizações");
-        
+
+
 
     }
     public void btnMaisInteressado(){
@@ -67,9 +66,12 @@ public class OuvinteDosButtons implements ActionListener {
     	this.comumPDF(true);
         GeradorDePDF.gerarRelatorio(livrosFinal,
                 "MaisInteressados.pdf","Esses são os Livros esgotados com mais interessados","N°Interessados");
-
     }
     public void comumPDF(boolean condicao) {
+        CentralDeInformacoes central= Persistencia.getUnicaInstancia().recuperar();
+        ArrayList<Livro> livros =central.getLivros();
+        livrosFinal = new ArrayList<Livro>();
+        livros = central.getLivros();
     	for(int i=0;i<10;i++) {
     		int num=0;
     		Livro livro =null;

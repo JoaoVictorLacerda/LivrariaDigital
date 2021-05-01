@@ -8,20 +8,6 @@ import Utilitarios.Persistencia.PersistenciaSingleton.Persistencia;
 import java.util.ArrayList;
 
 public class CentralDeInformacoes {
-	
-	/**
-	 *  @author Karlos
-	 *   Essa classe está servindo para levar as informaçõescedidas pelousuário para a Persistência.
-	 * Ela é uma classe fundamental para o projeto.
-	 * Porque, sem ela não teríamos como armazenar asinformaçõesdentro do arquivo xml.
-	 * 
-	 * 
-	 *   Só será possível acessar as informações presentesno arquivo .xmlinvocando esta classe.
-	 * Ela é a única que trabalha em conjunto com a persistência.
-	 * E em seus atributos está a base pela qual nossoprojeto é composto.
-	 * 
-	 * **/
-	
     private Livreiro livreiro;
     private ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
     private ArrayList<Livro> livros = new ArrayList<Livro>();

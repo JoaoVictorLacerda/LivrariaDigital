@@ -391,7 +391,25 @@ public class TelaDetalhes extends TelaPadrao {
         JButton comprar = new JButton("Comprar");
         JButton addColecao = new JButton("Add a Coleção");
         JButton interesse = new JButton("Tenho interesse");
+        comprar.setBounds(260, 170, 130, 35);
+        comprar.addActionListener(ouvinte);
+        comprar.setFont(font);
+        comprar.setBackground(cor);
+        comprar.setBorder(null);
+
+        interesse.setBounds(540, 170, 130, 35);
+        interesse.addActionListener(ouvinte);
+        interesse.setFont(font);
+        interesse.setBackground(cor);
+        interesse.setBorder(null);
         interesse.setEnabled(false);
+
+        addColecao.setBounds(400, 170, 130, 35);
+        addColecao.addActionListener(ouvinte);
+        addColecao.setFont(font);
+        addColecao.setBackground(cor);
+        addColecao.setBorder(null);
+
         if(this.livro.getQuantidade()==0){
             comprar.setText("Esgotado");
             comprar.setEnabled(false);
@@ -401,26 +419,12 @@ public class TelaDetalhes extends TelaPadrao {
         if(this.isUser()){
             comprar.setEnabled(true);
             comprar.setText("Voltar");
-            addColecao.setEnabled(false);
-            interesse.setEnabled(false);
+            comprar.setBounds(400, 170, 130, 35);
+            addColecao.setVisible(false);
+            interesse.setVisible(false);
         }
-        comprar.setBounds(260, 170, 130, 35);
-        comprar.addActionListener(ouvinte);
-        comprar.setFont(font);
-        comprar.setBackground(cor);
-        comprar.setBorder(null);
 
-        addColecao.setBounds(400, 170, 130, 35);
-        addColecao.addActionListener(ouvinte);
-        addColecao.setFont(font);
-        addColecao.setBackground(cor);
-        addColecao.setBorder(null);
 
-        interesse.setBounds(540, 170, 130, 35);
-        interesse.addActionListener(ouvinte);
-        interesse.setFont(font);
-        interesse.setBackground(cor);
-        interesse.setBorder(null);
 
         this.back.add(comprar);
         this.back.add(addColecao);

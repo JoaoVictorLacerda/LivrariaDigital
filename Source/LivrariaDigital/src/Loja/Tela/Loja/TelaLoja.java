@@ -3,6 +3,7 @@ package Loja.Tela.Loja;
 
 import Loja.OuvintesLoja.JTable.OuvinteDosJTable;
 import Loja.OuvintesLoja.JcomboBox.OuvinteCategorias;
+import SpaceADM.CarregarPlanilha.Model.JLabelIntoCedula;
 import SpaceADM.Home.Tela.TelaHomeADM;
 import SpaceUSER.Home.Tela.TelaHomeUser;
 import TelaPadrao.Tela.TelaPadrao;
@@ -106,10 +107,10 @@ public class TelaLoja extends TelaPadrao {
         painelTitulo.setBounds(0,0,800,150);
 
         this.add(this.painelTitulo);
-        
+
 
     }
-   
+
 
     public void addLabelsIntoPainel(){
         Font font = new Font("Impact",Font.BOLD,37);
@@ -174,13 +175,15 @@ public class TelaLoja extends TelaPadrao {
             @Override
             public void keyTyped(KeyEvent e) {
                 Character c = e.getKeyChar();
-                String letras = pesquisa.getText()+Character.toString(c).toLowerCase();
                 ArrayList<Livro> l = new ArrayList<>();
-                for(Livro livro :LIVROS){
-                    if(livro.getTitulo().toLowerCase().contains(letras)){
-                        l.add(livro);
+                if(!c.equals('\b')){
+                    String letras = pesquisa.getText()+Character.toString(c);
+                    for(Livro livro :LIVROS){
+                        if(livro.getTitulo().contains(letras)){
+                            l.add(livro);
+                        }
                     }
-                }if(l.isEmpty()){
+                }else{
                     l=LIVROS;
                 }
                 limpaPlanilha();
@@ -238,14 +241,18 @@ public class TelaLoja extends TelaPadrao {
         modelo.addColumn("Quantidade");
 
         JTable tabela = new JTable(modelo);
-        
+
         tabela.setBounds(50, 155, 690, 290);
 
         tabela.getTableHeader().setFont(font);
         tabela.getTableHeader().setForeground(Color.black);
         tabela.getTableHeader().setReorderingAllowed(false);
         tabela.addMouseListener(new OuvinteDosJTable(this));
+        tabela.setBackground(new Color(179, 179, 179));
+        tabela.setSelectionBackground(new Color(146, 146, 146));
+        tabela.setForeground(Color.BLACK);
         tabela.setFont(font);
+        tabela.setDefaultRenderer(Object.class, new JLabelIntoCedula());
         tabela.setRowHeight(30);
 
         JScrollPane scroll = new JScrollPane(tabela);

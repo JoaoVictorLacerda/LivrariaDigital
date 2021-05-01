@@ -1,8 +1,5 @@
 package Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse;
 
-import javax.swing.*;
-import java.util.ArrayList;
-
 public  abstract class Livro {
 
     private String titulo;
@@ -13,10 +10,9 @@ public  abstract class Livro {
     private int quantidade;
     private float preco;
     private int anoDePublicacao;
-    private final String TIPO ="";
+    private  String TIPO="";
     private int numeroDeVisualizacoes=0;
     private String autor;
-    private ArrayList<String> comentarios;
     private int numeroDePessoasQueIndicaramInteresse = 0;
 
     public int getNumeroDePessoasQueIndicaramInteresse() {
@@ -25,14 +21,6 @@ public  abstract class Livro {
 
     public void setNumeroDePessoasQueIndicaramInteresse(int numeroDePessoasQueIndicaramInteresse) {
         this.numeroDePessoasQueIndicaramInteresse = numeroDePessoasQueIndicaramInteresse;
-    }
-
-    public ArrayList<String> getComentarios() {
-        return comentarios;
-    }
-
-    public void addComentarios(String comentarios) {
-        this.comentarios.add(comentarios);
     }
 
     public String getAutor() {
@@ -132,5 +120,12 @@ public  abstract class Livro {
 
     public void setAnoDePublicacao(int anoDePublicacao) {
         this.anoDePublicacao = anoDePublicacao;
+    }
+
+    public void setTIPO(String TIPO) {
+        this.TIPO = TIPO;
+    }
+    public String getTIPO(String TIPO) {
+        return TIPO;
     }
 }

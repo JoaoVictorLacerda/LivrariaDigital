@@ -1,5 +1,6 @@
 package SpaceUSER.TelaParaColecoes;
 
+import SpaceADM.CarregarPlanilha.Model.JLabelIntoCedula;
 import SpaceUSER.Home.Tela.TelaHomeUser;
 import TelaPadrao.Tela.TelaPadrao;
 import Utilitarios.Persistencia.Central_de_informacoes.Usuario.Usuario;
@@ -82,7 +83,7 @@ public class Tela extends TelaPadrao {
         }
         for(String livro: array){
             String lista [] = livro.split(",");
-            Object ob [] = {lista[0],lista[1],lista[2],lista[3]};
+            Object ob [] = {lista[0],lista[1],lista[2]};
             modelo.addRow(ob);
         }
     }
@@ -92,17 +93,17 @@ public class Tela extends TelaPadrao {
         modelo.addColumn("Título");
         modelo.addColumn("Tipo");
         modelo.addColumn("Gênero");
-        modelo.addColumn("Resumo");
 
         JTable tabela = new JTable();
         tabela.setModel(modelo);
         tabela.setBounds(10, 70, 665, 250);
-        tabela.getColumn("Título").setMaxWidth(340);
-        tabela.getColumn("Tipo").setMaxWidth(220);
-        tabela.getColumn("Gênero").setMaxWidth(220);
-        tabela.getColumn("Resumo").setMaxWidth(110);
+        tabela.getColumn("Título").setMaxWidth(376);
+        tabela.getColumn("Tipo").setMaxWidth(256);
+        tabela.getColumn("Gênero").setMaxWidth(256);
+        tabela.setDefaultRenderer(Object.class, new JLabelIntoCedula());
+        tabela.setBackground(new Color(179, 179, 179));
+        tabela.setSelectionBackground(new Color(146, 146, 146));
         tabela.getTableHeader().setFont(font);
-        tabela.getTableHeader().setForeground(Color.black);
 
         tabela.getTableHeader().setReorderingAllowed(false);
         tabela.setFont(font);
