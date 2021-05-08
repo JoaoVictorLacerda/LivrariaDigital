@@ -1,6 +1,7 @@
 package SpaceADM.CarregarPlanilha.Tela;
 
 
+import DynamicLayout.DynamicLayout;
 import SpaceADM.CarregarPlanilha.Model.GenerosAndTipos;
 import SpaceADM.CarregarPlanilha.Model.JLabelIntoCedula;
 import SpaceADM.CarregarPlanilha.Model.Livraria;
@@ -32,6 +33,7 @@ public class TelaCarregarPlanilha extends TelaPadrao {
     public TelaCarregarPlanilha() {
         super("Carregar Planilha");
         this.setSize(700,460);
+        this.setLayout(new DynamicLayout(700,460));
         this.addJButtons();
         this.addModeloDaTabel();
         this.addTabela1();
@@ -56,6 +58,7 @@ public class TelaCarregarPlanilha extends TelaPadrao {
         tabel.setForeground(Color.BLACK);
         tabel.setDefaultRenderer(Object.class, new JLabelIntoCedula());
         tabel.setFont(font);
+        tabel.setLayout(new DynamicLayout(600,300));
 
         TableColumn colunas[]= new TableColumn[3];
         int element[]={0,8,9};

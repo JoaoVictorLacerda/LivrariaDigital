@@ -1,5 +1,6 @@
 package SpaceUSER.Login.Tela;
 
+import DynamicLayout.DynamicLayout;
 import SpaceUSER.Login.Ouvintes.OuvinteClienteEsqueceuASenha;
 import SpaceUSER.Login.Ouvintes.OuvinteLoginButtons;
 import TelaPadrao.Tela.TelaPadrao;
@@ -21,15 +22,16 @@ public class TelaLoginCliente extends TelaPadrao {
         this.addFormLabel();
         this.addInputs();
         this.addButtons();
+        this.setResizable(true);
         this.addBackground();
         this.setVisible(true);
 
     }
 
     public void addPainel() {
-        this.JP_PAINEL.setBounds(200, 15, 300, 330);
+        this.JP_PAINEL.setBounds(200, 15, 300, 340);
         this.JP_PAINEL.setBackground(Color.DARK_GRAY);
-        this.JP_PAINEL.setLayout(null);
+        this.JP_PAINEL.setLayout(new DynamicLayout(300, 340));
         this.add(JP_PAINEL);
     }
 
@@ -94,8 +96,8 @@ public class TelaLoginCliente extends TelaPadrao {
         senhaSeparador.setBackground(Color.WHITE);
         this.JP_PAINEL.add(senhaSeparador);
 
-        JLabel ou = new JLabel("ou");
-        ou.setBounds(138, 225, 300, 15);
+        JLabel ou = new JLabel("ou",JLabel.CENTER);
+        ou.setBounds(129, 225, 30, 15);
         ou.setFont(new Font("Arial",Font.BOLD,12));
         ou.setForeground(Color.GRAY);
         this.JP_PAINEL.add(ou);

@@ -1,5 +1,6 @@
 package SpaceUSER.Home.Tela;
 
+import DynamicLayout.DynamicLayout;
 import SpaceUSER.Home.Ouvinte.OuvinteDosJButtons;
 import TelaPadrao.Tela.TelaPadrao;
 import Utilitarios.Persistencia.Central_de_informacoes.Usuario.Usuario;
@@ -98,9 +99,9 @@ public class TelaHomeUser extends TelaPadrao {
     }
 
     public void addPainel() {
-        this.JP_PAINEL.setBounds(200, 15, 300, 330);
+        this.JP_PAINEL.setBounds(200, 15, 300, 340);
         this.JP_PAINEL.setBackground(Color.DARK_GRAY);
-        this.JP_PAINEL.setLayout(null);
+        this.JP_PAINEL.setLayout(new DynamicLayout(300,340));
         this.add(JP_PAINEL);
     }
 

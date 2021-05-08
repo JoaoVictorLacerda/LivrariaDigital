@@ -1,6 +1,7 @@
 package Loja.Tela.Loja;
 
 
+import DynamicLayout.DynamicLayout;
 import Loja.OuvintesLoja.JTable.OuvinteDosJTable;
 import Loja.OuvintesLoja.JcomboBox.OuvinteCategorias;
 import SpaceADM.CarregarPlanilha.Model.JLabelIntoCedula;
@@ -37,13 +38,14 @@ public class TelaLoja extends TelaPadrao {
 
     public void chamaMetodosIniciais(){
         this.setSize(800,500);
+        this.setLayout(new DynamicLayout(800,500));
         this.addJPainelTitulo();
+        this.addTabela();
         this.addLabelsIntoPainel();
         this.addImgGoToPerfil();
         this.addLabels();
         this.addPesquisa();
-        this.addTabela();
-        this.addComboBox();
+        this.addFiltragem();
         this.addBackground();
         this.setVisible(true);
     }
@@ -103,7 +105,7 @@ public class TelaLoja extends TelaPadrao {
 
     public void addJPainelTitulo(){
         painelTitulo = new JPanelDegrade(0,150,0,0);
-        painelTitulo.setLayout(null);
+        painelTitulo.setLayout(new DynamicLayout(800,150));
         painelTitulo.setBounds(0,0,800,150);
 
         this.add(this.painelTitulo);
@@ -139,7 +141,7 @@ public class TelaLoja extends TelaPadrao {
         this.painelTitulo.add(pesquisar);
     }
 
-    public void addComboBox(){
+    public void addFiltragem(){
         String[] generos = {"Todos os Livros",
                 "Recomendados",
                 "Literatura",
@@ -254,6 +256,7 @@ public class TelaLoja extends TelaPadrao {
         tabela.setFont(font);
         tabela.setDefaultRenderer(Object.class, new JLabelIntoCedula());
         tabela.setRowHeight(30);
+        tabela.setLayout(new DynamicLayout(690, 290));
 
         JScrollPane scroll = new JScrollPane(tabela);
         scroll.setBounds(50, 155, 690, 290);

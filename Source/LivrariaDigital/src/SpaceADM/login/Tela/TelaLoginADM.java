@@ -4,6 +4,7 @@ import java.awt.*;
 
 import javax.swing.*;
 
+import DynamicLayout.DynamicLayout;
 import SpaceADM.login.Ouvintes.OuvinteDoEsqueceuASenha;
 import SpaceADM.login.Ouvintes.OuvinteLoginButton;
 import TelaPadrao.Tela.TelaPadrao;
@@ -27,9 +28,9 @@ public class TelaLoginADM extends TelaPadrao {
 	}
 
 	public void addPainel() {
-		this.JP_PAINEL.setBounds(200, 15, 300, 330);
+		this.JP_PAINEL.setBounds(200, 15, 300, 340);
 		this.JP_PAINEL.setBackground(Color.DARK_GRAY);
-		this.JP_PAINEL.setLayout(null);
+		this.JP_PAINEL.setLayout(new DynamicLayout(300,340));
 		this.add(JP_PAINEL);
 	}
 

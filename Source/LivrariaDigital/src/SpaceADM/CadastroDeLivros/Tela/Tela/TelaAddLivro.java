@@ -1,6 +1,7 @@
 package SpaceADM.CadastroDeLivros.Tela.Tela;
 
 
+import DynamicLayout.DynamicLayout;
 import SpaceADM.CadastroDeLivros.Ouvintes.OuvinteCombo;
 import SpaceADM.CadastroDeLivros.Ouvintes.OuvinteKeyBord;
 import TelaPadrao.Tela.TelaPadrao;
@@ -10,14 +11,14 @@ import java.awt.*;
 
 public class TelaAddLivro extends TelaPadrao {
     private final Color COR_PADRAO = new Color(128, 196, 255);
-    public final JPanel JP_PAINEL =  new JPanel();
+    public final JPanel JP_PAINEL =  new JPanel(new DynamicLayout(300,560));
     private final Font FONT = new Font("Arial",Font.BOLD,13);
 
     public TelaAddLivro() {
         super("Adicionar Livro");
         this.addPainel();
-        this.addScrollPane();
         this.addCabecalho(0);
+        this.addScrollPane();
         this.addBackground();
         this.setVisible(true);
     }
@@ -35,16 +36,15 @@ public class TelaAddLivro extends TelaPadrao {
         JLabel livro = new JLabel(titulo, JLabel.CENTER);
         Font font = new Font("Arial",Font.BOLD,17);
 
-        livro.setBounds(0, 80, 290, 20);
+        livro.setBounds(0, 85, 290, 20);
         livro.setFont(font);
 
         this.JP_PAINEL.add(livro);
     }
     public void addPainel() {
-        this.JP_PAINEL.setBounds(200, 0, 300, 330);
+        this.JP_PAINEL.setPreferredSize(new Dimension(0,0));
+        this.JP_PAINEL.setBounds(200, 0, 300, 340);
         this.JP_PAINEL.setBackground(Color.DARK_GRAY);
-        this.JP_PAINEL.setLayout(null);
-
 
     }
 
@@ -53,7 +53,7 @@ public class TelaAddLivro extends TelaPadrao {
         JScrollPane scroll = new JScrollPane(JP_PAINEL);
         scroll.getVerticalScrollBar().setUnitIncrement(10);
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scroll.setBounds(200, 15,300 , 330);
+        scroll.setBounds(200, 15,300 , 340);
         this.add(scroll);
 
     }
@@ -78,7 +78,7 @@ public class TelaAddLivro extends TelaPadrao {
         tipos.setSelectedIndex(index);
         tipos.addActionListener(new OuvinteCombo(this));
         tipos.setFont(FONT);
-        tipos.setBounds(30, 45, 230, 25 );
+        tipos.setBounds(30, 35, 250, 40 );
 
         this.JP_PAINEL.add(tipos);
         this.JP_PAINEL.add(titulo);
@@ -87,7 +87,7 @@ public class TelaAddLivro extends TelaPadrao {
 
     public void addFormLabel() {
         JLabel titulo = new JLabel("Título:",JLabel.RIGHT);
-        JLabel ano = new JLabel("Ano de publicação:",JLabel.RIGHT);
+        JLabel ano = new JLabel(" Ano de publicação:",JLabel.LEFT);
         JLabel resumo = new JLabel("Resumo:",JLabel.RIGHT);
         JLabel idioma = new JLabel("Idioma:",JLabel.RIGHT);
         JLabel editora = new JLabel("Editora:",JLabel.RIGHT);

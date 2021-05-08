@@ -13,6 +13,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/email/activation.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/persistencia/xstream-1.4.15.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/PDF/iText-5.0.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/DynamicLayout/DynamicLayout.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

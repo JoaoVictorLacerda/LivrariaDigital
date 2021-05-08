@@ -21,6 +21,33 @@ public class TelaCadastroCliente extends TelaPadrao {
     private JComboBox<String> genero2;
     private JComboBox<String> genero3;
 
+    public TelaCadastroCliente() {
+        super("Cadastro Clientes");
+        try{
+            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            //não existe necessidade de aplicar gerenciador de layout aqui
+            this.setLayout(null);
+            this.setResizable(false);
+            this.addImagemUser();
+            this.addImgLivraria();
+            this.addFormLabel();
+            this.addInputs();
+            this.addCombos();
+            this.addBotoes();
+            this.radioSexo();
+            this.addScrollPane();
+
+            this.setVisible(true);
+
+        }catch(Exception e){
+
+            System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null,"Houve um erro");
+        }
+
+
+
+    }
 
     public void addPainel() { ;
         this.JP_PAINEL.setBounds(330, 0, 370, 400);
@@ -29,6 +56,7 @@ public class TelaCadastroCliente extends TelaPadrao {
         this.JP_PAINEL.setPreferredSize(new Dimension(0,560));
 
     }
+
     public void addScrollPane(){
         this.addPainel();
         JScrollPane scroll = new JScrollPane(JP_PAINEL);
@@ -179,7 +207,6 @@ public class TelaCadastroCliente extends TelaPadrao {
         this.JP_PAINEL.add(this.RB_FEMININO);
         this.JP_PAINEL.add(sexoSeparador);
     }
-
     public void addInputs() throws ParseException {
         this.nomec = new JTextField();
         this.emailc = new JTextField();
@@ -239,6 +266,7 @@ public class TelaCadastroCliente extends TelaPadrao {
         this.JP_PAINEL.add(senhaSeparador);
 
     }
+
     public void addBotoes(){
         JButton enviar = new JButton("Enviar");
         JButton voltar = new JButton("Voltar");
@@ -263,31 +291,6 @@ public class TelaCadastroCliente extends TelaPadrao {
     }
 
 
-
-    public TelaCadastroCliente() {
-        super("Cadastro Clientes");
-        try{
-            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            this.addImagemUser();
-            this.addImgLivraria();
-            this.addFormLabel();
-            this.addInputs();
-            this.addCombos();
-            this.addBotoes();
-            this.radioSexo();
-            this.addScrollPane();
-
-            this.setVisible(true);
-
-        }catch(Exception e){
-
-            System.out.println(e.getMessage());
-            JOptionPane.showMessageDialog(null,"Houve um erro");
-        }
-
-
-
-    }
 
     public String getNome() {
         return nomec.getText();

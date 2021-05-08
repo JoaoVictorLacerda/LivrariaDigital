@@ -47,12 +47,12 @@ public class OuvinteCombo implements ActionListener {
         cancelar.setFont(font);
         cancelar.setForeground(Color.BLACK);
         cancelar.addActionListener(ouvinte);
-        cancelar.setBounds(15,componentes.getMaiorAltura()+50,110,30);
+        cancelar.setBounds(35,componentes.getMaiorAltura()+50,110,30);
 
         adicionar.setFont(font);
         adicionar.setForeground(Color.BLACK);
         adicionar.addActionListener(ouvinte);
-        adicionar.setBounds(155,componentes.getMaiorAltura()+50,110,30);
+        adicionar.setBounds(175,componentes.getMaiorAltura()+50,110,30);
 
         tela.JP_PAINEL.add(cancelar);
         tela.JP_PAINEL.add(adicionar);
@@ -65,7 +65,7 @@ public class OuvinteCombo implements ActionListener {
         int index = combo.getSelectedIndex();
 
         tela.JP_PAINEL.removeAll();
-        tela.JP_PAINEL.setPreferredSize(new Dimension(0,320));
+        //tela.JP_PAINEL.setPreferredSize(new Dimension(0,320));
         tela.addCabecalho(index);
 
         if(index !=0){

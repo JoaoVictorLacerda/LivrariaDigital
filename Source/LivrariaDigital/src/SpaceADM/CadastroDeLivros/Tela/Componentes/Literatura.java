@@ -68,7 +68,7 @@ public class Literatura extends SuperclasseTipos implements ComponentesAddNaTela
 
     @Override
     public int getMaiorAltura() {
-        return 410;
+        return 440;
     }
 
     @Override

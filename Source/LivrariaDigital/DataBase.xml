@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CentralDeInformacoes>
+  <livreiro>
+    <nome>Livreiro teste</nome>
+    <email>email.teste@gmail.com</email>
+    <senha>29183,292d0,53gd1,</senha><!--Senha: 123-->.
+  </livreiro>
+  <usuarios/>
+  <livros>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+      <titulo>Livro6</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Religião</genero>
+      <editora>da</editora>
+      <quantidade>6</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2005</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>1</numeroDeVisualizacoes>
+      <autor>a,n</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Desenvolvimento Pessoal</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+      <titulo>Livro3</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Gibi</genero>
+      <editora>da</editora>
+      <quantidade>3</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2002</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <numeroDaEdicao>5564</numeroDaEdicao>
+      <mesDeLancamento>Dezembro</mesDeLancamento>
+      <TIPO>Periódicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+      <titulo>Livro4</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Formação Profissional</genero>
+      <editora>da</editora>
+      <quantidade>4</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2003</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <assunto>ddas</assunto>
+      <TIPO>Técnicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+      <titulo>Livro5</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Literatura Brasileira</genero>
+      <editora>da</editora>
+      <quantidade>5</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2004</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Literatura</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+      <titulo>Livro6</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Religião</genero>
+      <editora>da</editora>
+      <quantidade>6</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2005</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a,n</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Desenvolvimento Pessoal</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+      <titulo>Livro7</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Revista de notícias</genero>
+      <editora>da</editora>
+      <quantidade>7</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2006</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <numeroDaEdicao>66755564</numeroDaEdicao>
+      <mesDeLancamento>Janeiro</mesDeLancamento>
+      <TIPO>Periódicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+      <titulo>Livro8</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Formação Profissional</genero>
+      <editora>da</editora>
+      <quantidade>8</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2007</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <assunto>asd</assunto>
+      <TIPO>Técnicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+      <titulo>Livro9</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Artes</genero>
+      <editora>da</editora>
+      <quantidade>9</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2008</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Literatura</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+      <titulo>Livro10</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Autoajuda</genero>
+      <editora>da</editora>
+      <quantidade>10</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2009</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a,n</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Desenvolvimento Pessoal</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+      <titulo>Livro3</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Gibi</genero>
+      <editora>da</editora>
+      <quantidade>3</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2002</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <numeroDaEdicao>5564</numeroDaEdicao>
+      <mesDeLancamento>Dezembro</mesDeLancamento>
+      <TIPO>Periódicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+      <titulo>Livro4</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Formação Profissional</genero>
+      <editora>da</editora>
+      <quantidade>4</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2003</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <assunto>ddas</assunto>
+      <TIPO>Técnicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+      <titulo>Livro5</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Literatura Brasileira</genero>
+      <editora>da</editora>
+      <quantidade>5</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2004</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Literatura</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+      <titulo>Livro7</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Revista de notícias</genero>
+      <editora>da</editora>
+      <quantidade>7</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2006</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <numeroDaEdicao>66755564</numeroDaEdicao>
+      <mesDeLancamento>Janeiro</mesDeLancamento>
+      <TIPO>Periódicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Periodicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+      <titulo>Livro8</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Formação Profissional</genero>
+      <editora>da</editora>
+      <quantidade>8</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2007</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <assunto>asd</assunto>
+      <TIPO>Técnicos</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Tecnicos>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+      <titulo>Livro9</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Artes</genero>
+      <editora>da</editora>
+      <quantidade>9</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2008</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Literatura</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.Literatura>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+      <titulo>Livro10</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Autoajuda</genero>
+      <editora>da</editora>
+      <quantidade>10</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2009</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>0</numeroDeVisualizacoes>
+      <autor>a,n</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Desenvolvimento Pessoal</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+    <Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+      <titulo>Livro2</titulo>
+      <resumo>d</resumo>
+      <idioma>da</idioma>
+      <genero>Autoajuda</genero>
+      <editora>da</editora>
+      <quantidade>1</quantidade>
+      <preco>12.0</preco>
+      <anoDePublicacao>2001</anoDePublicacao>
+      <TIPO defined-in="Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro"></TIPO>
+      <numeroDeVisualizacoes>1</numeroDeVisualizacoes>
+      <autor>a,n</autor>
+      <numeroDePessoasQueIndicaramInteresse>0</numeroDePessoasQueIndicaramInteresse>
+      <TIPO>Desenvolvimento Pessoal</TIPO>
+    </Utilitarios.Persistencia.Central__de__informacoes.Livro.Tipos.DesenvolvimentoPessoal>
+  </livros>
+  <loginSingleton>
+    <livreiro>true</livreiro>
+  </loginSingleton>
+</CentralDeInformacoes>

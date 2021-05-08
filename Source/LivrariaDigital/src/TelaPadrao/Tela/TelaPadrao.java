@@ -1,6 +1,8 @@
 package TelaPadrao.Tela;
 
 
+import DynamicLayout.DynamicLayout;
+
 import java.awt.*;
 
 
@@ -48,10 +50,11 @@ public abstract class TelaPadrao extends JFrame{
 
 		Container div = this.getContentPane();
 		div.setBackground(new Color(179, 179, 179));
+		this.setLayout(new DynamicLayout(700,400));
 		this.setSize(700,400);
 		this.setTitle("Livraria Digital - "+titulo);
-		this.setLayout(null);
-		this.setResizable(false);
+		this.setResizable(true);
+		this.setMinimumSize(new Dimension(650,350));
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

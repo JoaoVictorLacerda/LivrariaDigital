@@ -1,5 +1,6 @@
 package SpaceUSER.TelaParaColecoes;
 
+import DynamicLayout.DynamicLayout;
 import SpaceADM.CarregarPlanilha.Model.JLabelIntoCedula;
 import SpaceUSER.Home.Tela.TelaHomeUser;
 import TelaPadrao.Tela.TelaPadrao;
@@ -33,7 +34,7 @@ public class Tela extends TelaPadrao {
 
     public void addJPainelTitulo(){
         painelTitulo = new JPanel();
-        painelTitulo.setLayout(null);
+        painelTitulo.setLayout(new DynamicLayout(700, 60));
         painelTitulo.setBounds(0,0,700,60);
         painelTitulo.setBackground(new Color(252, 203, 177, 163));
         this.add(this.painelTitulo);
@@ -94,16 +95,13 @@ public class Tela extends TelaPadrao {
         modelo.addColumn("Tipo");
         modelo.addColumn("Gênero");
 
-        JTable tabela = new JTable();
-        tabela.setModel(modelo);
+        JTable tabela = new JTable(modelo);
         tabela.setBounds(10, 70, 665, 250);
-        tabela.getColumn("Título").setMaxWidth(376);
-        tabela.getColumn("Tipo").setMaxWidth(256);
-        tabela.getColumn("Gênero").setMaxWidth(256);
         tabela.setDefaultRenderer(Object.class, new JLabelIntoCedula());
         tabela.setBackground(new Color(179, 179, 179));
         tabela.setSelectionBackground(new Color(146, 146, 146));
         tabela.getTableHeader().setFont(font);
+        tabela.setLayout(new DynamicLayout(665,250));
 
         tabela.getTableHeader().setReorderingAllowed(false);
         tabela.setFont(font);

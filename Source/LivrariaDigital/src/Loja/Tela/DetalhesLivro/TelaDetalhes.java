@@ -1,6 +1,7 @@
 package Loja.Tela.DetalhesLivro;
 
 
+import DynamicLayout.DynamicLayout;
 import Loja.Imagens.Imagens;
 import Loja.OuvintesDetalhes.OuvinteDosJButtons;
 import Loja.Tela.Loja.TelaLoja;
@@ -97,7 +98,7 @@ public class TelaDetalhes extends TelaPadrao {
 
     public void addPainelBackg() {
         back = new BackgroundTela();
-        back.setLayout(null);
+        back.setLayout(new DynamicLayout(700,400));
         back.setBounds(0, 0, 700, 400);
         back.setBackground(Color.DARK_GRAY);
         this.add(back);
@@ -107,7 +108,7 @@ public class TelaDetalhes extends TelaPadrao {
     public void addPainelDetalhes() {
         detalhesDoLivro = new JPanel();
         detalhesDoLivro.setLayout(null);
-        detalhesDoLivro.setBounds(0, 0, 230, 373);
+        detalhesDoLivro.setBounds(0, 0, 230, 405);
         detalhesDoLivro.setBackground(Color.DARK_GRAY);
         int i;
         if(this.user==null){
@@ -116,11 +117,12 @@ public class TelaDetalhes extends TelaPadrao {
             i=1000;
         }
         this.detalhesDoLivro.setPreferredSize(new Dimension(0,i));
+        this.detalhesDoLivro.setLayout(new DynamicLayout(230,i));
 
         JScrollPane scroll = new JScrollPane(detalhesDoLivro);
         scroll.getVerticalScrollBar().setUnitIncrement(10);
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scroll.setBounds(0, 0, 230 , 373);
+        scroll.setBounds(0, 0, 230 , 405);
 
         this.add(scroll);
 

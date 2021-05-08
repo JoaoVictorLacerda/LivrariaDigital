@@ -1,5 +1,6 @@
 package SpaceADM.Home.Tela;
 
+import DynamicLayout.DynamicLayout;
 import SpaceADM.Home.Ouvinte.OuvinteDosButtons;
 import Utilitarios.Persistencia.Central_de_informacoes.Central.CentralDeInformacoes;
 import Utilitarios.Persistencia.PersistenciaSingleton.Persistencia;
@@ -23,9 +24,9 @@ public class TelaHomeADM extends TelaPadrao {
     }
 
     public void addPainel() {
-        this.JP_PAINEL.setBounds(200, 15, 300, 330);
+        this.JP_PAINEL.setBounds(200, 15, 300, 340);
         this.JP_PAINEL.setBackground(Color.DARK_GRAY);
-        this.JP_PAINEL.setLayout(null);
+        this.JP_PAINEL.setLayout(new DynamicLayout(300,340));
         this.add(JP_PAINEL);
     }
 

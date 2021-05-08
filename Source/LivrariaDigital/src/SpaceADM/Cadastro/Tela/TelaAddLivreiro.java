@@ -16,6 +16,9 @@ public class TelaAddLivreiro extends TelaPadrao{
 
 	public TelaAddLivreiro() {
 		super("Adicionar Livreiro");
+		//não existe necessidade de aplicar gerenciador de layout aqui
+		this.setLayout(null);
+		this.setResizable(false);
 		this.addPainel();
 		this.addImagemUser();
 		this.addFormLabel();

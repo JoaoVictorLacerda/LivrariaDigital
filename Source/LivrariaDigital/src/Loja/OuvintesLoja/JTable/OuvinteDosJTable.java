@@ -7,6 +7,7 @@ import Utilitarios.Persistencia.Central_de_informacoes.Livro.Superclasse.Livro;
 import Utilitarios.Persistencia.PersistenciaSingleton.Persistencia;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -19,6 +20,7 @@ public class OuvinteDosJTable implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+
         if(e.getClickCount() == 2){
             JTable cedula = (JTable) e.getSource();
             int i =cedula.getSelectedRow();
